@@ -25,7 +25,7 @@ def scrape_website(url):
         driver.get(url)  
         solve_result = driver.execute('executeCdpCommand', {  
             'cmd': 'Captcha.solve',  
-            'params': {'detectTimeout': 30000},  
+            'params': {'detectTimeout': 30000},
         })  
         print('Captcha solve status:', solve_result['value']['status'])
 
